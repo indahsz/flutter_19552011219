@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+import 'package:flutter_19552011219/pages/dashboard_page.dart';
+import 'package:flutter_19552011219/pages/date_page.dart';
+import 'package:flutter_19552011219/pages/time_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -28,15 +32,9 @@ class _MainPageState extends State<MainPage> {
             setState(() => _selectedPage = index);
           },
           children: <Widget>[
-            Container(
-              color: Colors.blueAccent,
-            ),
-            Container(
-              color: Colors.redAccent,
-            ),
-            Container(
-              color: Colors.green,
-            ),
+            DashboardPage(),
+            DatePage(),
+            TimePage(),
           ],
         ),
       ),

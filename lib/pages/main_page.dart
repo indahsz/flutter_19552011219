@@ -13,7 +13,7 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   int _selectedPage = 0;
-  PageController _pageController = PageController();
+  final PageController _pageController = PageController();
 
   @override
   void dispose() {
@@ -46,9 +46,23 @@ class _MainPageState extends State<MainPage> {
         },
         items: <BottomNavyBarItem>[
           BottomNavyBarItem(
-              title: Text('Dashboard'), icon: Icon(Icons.dashboard)),
-          BottomNavyBarItem(title: Text('Date'), icon: Icon(Icons.date_range)),
-          BottomNavyBarItem(title: Text('Time'), icon: Icon(Icons.timer)),
+            title: Text('Dashboard'),
+            icon: Icon(Icons.dashboard),
+            activeColor: Colors.blueAccent,
+            inactiveColor: Colors.blueAccent,
+          ),
+          BottomNavyBarItem(
+            title: Text('Date'),
+            icon: Icon(Icons.date_range),
+            activeColor: Colors.redAccent,
+            inactiveColor: Colors.redAccent,
+          ),
+          BottomNavyBarItem(
+            title: Text('Time'),
+            icon: Icon(Icons.timer),
+            activeColor: Colors.green,
+            inactiveColor: Colors.green,
+          ),
         ],
       ),
     );
